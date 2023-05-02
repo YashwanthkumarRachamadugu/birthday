@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .container {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        gap: 10vh;
+    }
+
+    .header {
+        width: 100%;
+        height: 100vh;
+        /* background-color: #f1f1f1; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .container-middle {
+        width: 100%;
+        height: 350vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10vh;
+    }
+
+    .header .top {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header .top img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .header .middle img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        border: 10px solid red;
+    }
+
+    .header .bottom {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .header .bottom h1 {
+        background-color: red;
+    }
+
+    .header .bottom h2 {
+        background-color: red;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="top">
+                <h1>Today is Rajesh's Birthday</h1>
+                <img src="./cake.svg" alt="">
+            </div>
+            <div class="middle">
+                <img src="./rajesh.jpg" alt="">
+            </div>
+            <div class="bottom">
+                <h1>18 years old</h1>
+                <h2>01.03.2005</h2>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+</script>
+
+</html>
