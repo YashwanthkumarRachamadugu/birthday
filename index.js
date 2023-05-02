@@ -104,27 +104,52 @@ document.body.appendChild(circle);
 
 // });
 
+/*
 document.addEventListener('mousemove', function (e) {
-    let y = e.pageY;
-    let x = e.pageX;
+    let y = e.pageY - 5;
+    let x = e.pageX - 5;
+    let left;
+    let top;
     // var scrollPosition = window.scrollY
-    circle.style.left = e.pageX - 5 + 'px'; // horizontal position of cursor
-    circle.style.top = e.pageY - 5 + 'px'; // vertical
+    left = x + 'px'; // horizontal position of cursor
+    top = y + 'px'; // vertical
 
     window.addEventListener('scroll', function (e) {
         var scrollPosition = window.scrollY;
-        circle.style.top = y + scrollPosition + 'px'; // vertical position of cursor
+        top = y + scrollPosition + 'px'; // vertical position of cursor
+        circle.style.left = left;
+        circle.style.top = top;
     });
 
+    circle.style.left = left;
+    circle.style.top = top;
 
 });
+*/
 
-// add event listener for scrolling
+// window.addEventListener('scroll', (e) => {
+//     // circle.style.top = window.scrollY + 'px';
+//     circle.style.top = window.scrollY + 'px';
+// })
 
-// window.addEventListener('scroll', function (e) {
-//     var scrollPosition = window.scrollY;
-//     circle.style.left = e.pageX - 5 + 'px'; // horizontal position of cursor
-//     circle.style.top = e.pageY - scrollPosition - 5 + 'px'; // vertical position of cursor
-//     console.log(scrollPosition)
-//     console.log(e.pageY, 2)
-// });
+// document.addEventListener('mousemove', (e) => {
+//     console.log('y ' + e.pageY, 1)
+//     console.log('x ' + e.pageX, 1)
+// })
+
+let y = 0;
+let x = 0;
+
+document.addEventListener('mousemove', (e) => {
+    y = e.pageY - 5 + 'px';
+    x = e.pageX - 5 + 'px';
+    circle.style.left = x;
+    circle.style.top = y;
+})
+
+window.addEventListener('scroll', (e) => {
+
+    // remove px from y let variable
+    circle.style.left = window.scrollX + parseInt(x) + 'px';
+    circle.style.top = window.scrollY + parseInt(y) + 'px';
+})
